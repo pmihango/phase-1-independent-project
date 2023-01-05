@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Planty Show</title>
+        <title>Brewery Show</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <meta charset="UTF-8">
@@ -11,14 +11,14 @@
 <body>
     <nav class="navbar bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand nav-item text-light" id="home-link">PLANTY SHOW</a>
+            <a class="navbar-brand nav-item text-light" id="home-link">BREWERY SHOW</a>
 
             <ul class="navbar-nav me-auto d-flex flex-row">
                 <li class="nav-item me-2">
-                    <a class="text-light nav-link" href="#" id="category-link">GROUPS</a>
+                    <a class="text-light nav-link" href="#" id="list-link">LIST</a>
                 </li>
                 <li class="nav-item">
-                    <a class="text-light nav-link" href="#" id="countries-link">LOCATIONS</a>
+                    <a class="text-light nav-link" href="#" id="random-link">RANDOM</a>
                 </li>
             </ul>
             <form class="d-flex" id="search-form">
@@ -28,5 +28,28 @@
             
         </div>
     </nav>
+    <div class="container mt-5" id="main-container">
+
+        <div class="row" id="random-meal">
+
+            </div>
+
+                <div class="row mt-3 mb-3" id="list-breweries" hidden>
+                <h3>LIST</h3>
+                </div>
+
+                <div class="row mt-3 mb-3" id="random-breweries" hidden>
+                <h3>RANDOM</h3>
+                </div>
+
+        <div class="row mt-3 mb-3" id="search-result" hidden>
+            <h3>SEARCH RESULTS</h3>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
