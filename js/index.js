@@ -181,5 +181,19 @@ const createSearchResults = (name, image, link) => {
     rootDiv.appendChild(cardDiv)
     return rootDiv
 }
+// load random brewery
+const loadRandomBrewery = () => {
+    fetch(RANDOM_BREWERY)
+        .then((response) => response.json())
+        .then((data) => {
+            const breweryData = data.brewery[0]
+            const name = breweryData.strTitle
+            const description = breweryData.strType
+            const image = breweryData.strBreweryThumb
+            const breweryElement = createRandomBrewery(image, name, description)
+            randomBreweryRow.appendChild(breweryElement)
+        })
+}
+
 
 })
