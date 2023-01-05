@@ -8,3 +8,9 @@ const BREWERY_TYPE = 'https://api.openbrewerydb.org/breweries?by_type=micro&per_
 // 4. Search
 const SEARCH = 'https://api.openbrewerydb.org/breweries/search?query={search}'
 
+document.addEventListener('DOMContentLoaded', () => {
+
+
+
+    
+})
