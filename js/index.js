@@ -114,6 +114,31 @@ homeLink.addEventListener('click', () => {
         // return the cardDiv
         return cardDiv
     }
+// create list element
+const createCategory = (image, name) => {
 
+    const rootDiv = document.createElement('div')
+    rootDiv.classList.add('col-4', 'p-1')
+
+    const cardDiv = document.createElement('div')
+    cardDiv.classList.add('card', 'col-12', 'p-2')
+
+    const listImg = document.createElement('img')
+    listImg.classList.add('card-img-top')
+    listImg.src = image
+
+    const listTitle = document.createElement('h4')
+    listTitle.classList.add('card-title')
+    listTitle.innerText = name
+
+    // append title and image to card
+    cardDiv.appendChild(listImg)
+    cardDiv.appendChild(listTitle)
+
+    rootDiv.appendChild(cardDiv)
+
+    return rootDiv
+
+}
 
 })
