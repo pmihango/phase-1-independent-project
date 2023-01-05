@@ -138,7 +138,19 @@ const createCategory = (image, name) => {
     rootDiv.appendChild(cardDiv)
 
     return rootDiv
-
 }
+// create brewery types element
+    const createTypes = (Type) => {
+    const rootDiv = document.createElement('div')
+    rootDiv.classList.add('col-3', 'p-1')
+
+    const spanData = document.createElement('span')
+    spanData.classList.add('col-12', 'badge', 'text-bg-success', 'p-2')
+    spanData.innerText = type
+
+    rootDiv.appendChild(spanData)
+    return rootDiv
+}
+
 
 })
