@@ -10,7 +10,11 @@ const SEARCH = 'https://api.openbrewerydb.org/breweries/search?query={search}'
 
 document.addEventListener('DOMContentLoaded', () => {
 
+// ROWS DATA
+const randomBreweryRow = document.getElementById('random-brewery')
+const listBreweryRow = document.getElementById('brewery-list')
+const typeOfBreweryRow = document.getElementById('brewery-type')
+const searchRow = document.getElementById('search-result')
 
 
-    
 })
