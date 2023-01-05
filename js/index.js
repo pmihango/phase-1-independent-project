@@ -21,5 +21,34 @@ const searchRow = document.getElementById('search-result')
  const randomLink = document.getElementById('random-link')
  const homeLink = document.getElementById('home-link')
 
- 
+ // search form
+  const searchForm = document.getElementById('search-form')
+  const searchInput = document.getElementById('search')
+
+ // CLICK EVENTS FOR LINKS
+ listLink.addEventListener('click', () => {
+    // hide random brewery
+    randomBreweryRow.style.display = "none"
+    // hide brewery types
+    typeOfBreweryRow.style.display = "none"
+    // hide search page
+    searchRow.style.display = "none"
+    // show list of breweries
+    listBreweryRow.removeAttribute('hidden')
+    listBreweryRow.style.display = "flex"
+})
+
+randomLink.addEventListener('click', () => {
+    // hide brewery list
+    listBreweryRow.style.display = "none"
+    // hide types of brewery
+    typeOfBreweryRow.style.display = "none"
+    // hide search page
+    searchRow.style.display = "none"
+    // show random brewery
+    randomBreweryRow.removeAttribute('hidden')
+    randomBreweryRow.style.display = "flex"
+})
+
+
 })
