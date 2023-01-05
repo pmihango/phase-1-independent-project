@@ -152,5 +152,34 @@ const createCategory = (image, name) => {
     return rootDiv
 }
 
+// create search results
+const createSearchResults = (name, image, link) => {
+    const rootDiv = document.createElement('div')
+    rootDiv.classList.add('col-3', 'p-1')
+
+    const cardDiv = document.createElement('div')
+    cardDiv.classList.add('card', 'px-0', 'h-100')
+
+    const breweryImg = document.createElement('img')
+    breweryImg.classList.add('card-img-top')
+    breweryImg.src = image
+
+    const breweryTitle = document.createElement('h6')
+    breweryTitle.classList.add('p-2')
+    breweryTitle.innerText = name
+
+    const breweryLink = document.createElement('a')
+    breweryLink.classList.add('mt-1', 'mb-2', 'me-3', 'ms-3', 'btn', 'btn-warning')
+    breweryLink.innerText = 'VISIT ...'
+    breweryLink.href = link
+    breweryLink.target = '_blank'
+
+    cardDiv.appendChild(breweryImg)
+    cardDiv.appendChild(breweryTitle)
+    cardDiv.appendChild(brewerylLink)
+
+    rootDiv.appendChild(cardDiv)
+    return rootDiv
+}
 
 })
