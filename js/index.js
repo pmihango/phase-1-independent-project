@@ -69,7 +69,51 @@ homeLink.addEventListener('click', () => {
         searchRow.removeAttribute('hidden')
     })
 
+    // create random brewery element
+    const createRandomBrewery = (image, name, description) => {
 
+        const cardDiv = document.createElement('div')
+        cardDiv.classList.add('card', 'col-12', 'px-0', 'mb-3')
+
+        const rowDiv = document.createElement('div')
+        rowDiv.classList.add('row')
+
+        const imgDiv = document.createElement('div')
+        imgDiv.classList.add('col-6')
+
+        const bodyDiv = document.createElement('div')
+        bodyDiv.classList.add('col-6', 'card-body')
+
+        const breweryImg = document.createElement('img')
+        breweryImg.classList.add('card-img', 'h-100')
+        breweryImg.src = image
+        breweryImg.objectFit = 'cover'
+
+        const breweryTitle = document.createElement('h5')
+        breweryTitle.classList.add('card-title')
+        breweryTitle.innerText = name
+
+        const breweryDescription = document.createElement('p')
+        breweryDescription.classList.add('card-text')
+        breweryDescription.innerText = description
+
+        // append body elements
+        bodyDiv.appendChild(breweryTitle)
+        bodyDiv.appendChild(breweryDescription)
+
+        // append image elements
+        imgDiv.appendChild(breweryImg)
+
+        // append divs to row
+        rowDiv.appendChild(imgDiv)
+        rowDiv.appendChild(bodyDiv)
+
+        // append row to card
+        cardDiv.appendChild(rowDiv)
+
+        // return the cardDiv
+        return cardDiv
+    }
 
 
 })
