@@ -49,6 +49,27 @@ randomLink.addEventListener('click', () => {
     randomBreweryRow.removeAttribute('hidden')
     randomBreweryRow.style.display = "flex"
 })
+homeLink.addEventListener('click', () => {
+    // hide categories, search and countries
+    randomBreweryRow.style.display = "flex"
+    listBreweryRow.style.display = "none"
+    typeOfBreweryRow.style.display = "none"
+    searchRow.style.display = "none"
+
+})
+    // search form submit listener
+    searchForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const query = searchInput.value
+        searchMeal(query)
+        randomBreweryRow.style.display = "none"
+        listBreweryRow.style.display = "none"
+        typeOfBreweryRow.style.display = "none"
+        searchRow.style.display = "flex"
+        searchRow.removeAttribute('hidden')
+    })
+
+
 
 
 })
