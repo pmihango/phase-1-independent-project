@@ -194,6 +194,20 @@ const loadRandomBrewery = () => {
             randomBreweryRow.appendChild(breweryElement)
         })
 }
+// load brewery list
+const loadlist = () => {
+    fetch(LIST)
+        .then((response) => response.json())
+        .then((data) => {
+            const listData = data.list
+            const listElems = listData.map(
+                cat => createCategory(cat.strListThumb, cat.strList)
+            )
+            breweryListRow.append(...listElems)
+        })
+}
+
+
 
 
 })
