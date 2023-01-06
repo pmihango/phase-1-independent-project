@@ -61,7 +61,7 @@ homeLink.addEventListener('click', () => {
     searchForm.addEventListener('submit', (e) => {
         e.preventDefault()
         const query = searchInput.value
-        searchMeal(query)
+        searchBrewery(query)
         randomBreweryRow.style.display = "none"
         listBreweryRow.style.display = "none"
         typeOfBreweryRow.style.display = "none"
@@ -187,10 +187,10 @@ const loadRandomBrewery = () => {
         .then((response) => response.json())
         .then((data) => {
             const breweryData = data.brewery[0]
-            const name = breweryData.strTitle
-            const description = breweryData.strType
-            const image = breweryData.strBreweryThumb
-            const breweryElement = createRandomBrewery(image, name, description)
+            const name = breweryData.strName
+            const description = breweryData.strState
+            // const image = breweryData.strBreweryThumb
+            const breweryElement = createRandomBrewery(name, state)
             randomBreweryRow.appendChild(breweryElement)
         })
 }
