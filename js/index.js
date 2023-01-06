@@ -28,7 +28,7 @@ const searchRow = document.getElementById('search-result')
  // CLICK EVENTS FOR LINKS
  listLink.addEventListener('click', () => {
     // hide random brewery
-    randomBreweryRow.style.display = "none"
+    randomBreweryRow.style.display = "flex"
     // hide brewery types
     typeOfBreweryRow.style.display = "none"
     // hide search page
@@ -115,7 +115,7 @@ homeLink.addEventListener('click', () => {
         return cardDiv
     }
 // create list element
-const createCategory = (image, name) => {
+const createList = (List) => {
 
     const rootDiv = document.createElement('div')
     rootDiv.classList.add('col-4', 'p-1')
@@ -176,7 +176,7 @@ const createSearchResults = (name, image, link) => {
 
     cardDiv.appendChild(breweryImg)
     cardDiv.appendChild(breweryTitle)
-    cardDiv.appendChild(brewerylLink)
+    cardDiv.appendChild(breweryLink)
 
     rootDiv.appendChild(cardDiv)
     return rootDiv
@@ -207,7 +207,32 @@ const loadlist = () => {
         })
 }
 
+// load types
 
+// search data
+const searchBrewery = (brewery) => {
+    fetch(`${SEARCH}${brewery}`)
+        .then((response) => response.json())
+        .then((data) => {
+            const breweryDataList = data.brewery
+            const searchResults = breweryDataList.map(
+                breweryData => {
+                    const name = breweryData.strBrewery
+                    const image = breweryData.strBreweryThumb
+                    const link = breweryData.strLink
+                    console.log(name)
+                    return createSearchResults(name, image, link)
+                }
+            )
+            // replace all children
+            searchRow.replaceChildren(...searchResults)
+        })
+}
 
+// load data to UI
+loadRandomBrewery()
+loadList()
+loadTypes()
 
 })
+
