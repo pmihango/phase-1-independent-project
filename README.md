@@ -1,3 +1,8 @@
+
+# Project Title
+
+List of Breweries across United States
+
 ## Projecct Description
 
 This is a project meant to publish a list of breweries for a public API
