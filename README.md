@@ -5,6 +5,8 @@ This is a project meant to publish a list of breweries for a public API
 ## Project requirements
 The project uses a public API as provided in the link attached
 
+https://www.openbrewerydb.org/documentation
+
 Its core function is to provide a list of breweries, their name, state location, coordinates, and brewery type
 
 ## Getting Started
