@@ -32,7 +32,7 @@ Open index.htl in a browser
 
 You can load a random cocktail
 
-Search for a known cocktailto find more details
+Search for a known cocktail to find more details and instructions to prepare it.
 
 List all the cocktails
 
