@@ -2,9 +2,9 @@
 //1. Random cocktail
 const RANDOM_COCKTAIL = 'www.thecocktaildb.com/api/json/v1/1/random.php'
 // 2. Categories
-const CATEGORIES = 'www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
+const CATEGORIES = 'www.thecocktaildb.com/api/json/v1/1/list.php?c='
 // 3. Glasses
-const GLASSES = 'www.thecocktaildb.com/api/json/v1/1/list.php?g=list'
+const GLASSES = 'www.thecocktaildb.com/api/json/v1/1/list.php?g='
 // 4. Search
 const SEARCH = 'www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
@@ -198,9 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
             .then((data) => {
                 const cocktailData = data.drinks[0]
                 const name = cocktailData.strDrink
-                const instructions = cocktailData.strInstructions
-                const image = cocktaillData.strDrinkThumb
-                const cocktailElement = createRandomCocktail (image, name, instructions)
+                const description = cocktailData.strInstructions
+                const image = cocktailData.strDrinkThumb
+                const cocktailElement = createRandomCocktail (image, name, description)
                 randomCocktailRow.appendChild(cocktailElement)
             })
     }
