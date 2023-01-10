@@ -1,40 +1,37 @@
 
 # Project Title
 
-List of Cocktails
+List of Random Cocktails
 
 ## Projecct Description
 
 This is a project meant to publish a list of cocktails for a public API
 
-## Project requirements
-
-The project uses a public API as provided in the link attached
-
 https://www.thecocktaildb.com/api.php
 
-Its core function is to provide a list of cocktail, their name, description, and ingredients.
+## Project Goals
+
+Its core function is to provide a list of cocktail, their name and ingredients.
+
 It will also show the type of glasses used to serve the cocktail
-One can search for a cocktail
+
 Display a random coktail
 
-## Getting Started
+## Project Details
 
 You can clone the following repository
 
 https://github.com/pmihango/phase-1-independent-project 
 
-run npm install to install the dependanceis 
+run npm install to install the node dependancies 
 
-Open index.htl in a browser
+Open the index.html file on a browser
 
-## Project funtionality
+The browser will display a random cocktail
 
-You can load a random cocktail
+Refresh the browser to load another  random cocktail
 
-Search for a known cocktail to find more details and instructions to prepare it.
-
-List all the cocktails
 
 ## Projech Link
+
 The project is deployed and can be accessed from the link https://pmihango.github.io/phase-1-independent-project/
